@@ -71,7 +71,7 @@ class TestYozumeCheckerUnit:
             MateResult.checkmate(["8c8d", "9a9b"]),  # first alternative → mate
         ]
 
-        checker = YozumeChecker(engine_path="/dummy/engine")
+        YozumeChecker(engine_path="/dummy/engine")
         # python-shogi の Board が実際に合法手を生成するため、
         # 実際のSFENが必要。これはユニットテストの限界。
         # 統合テストで実際の局面を使用する。
@@ -100,7 +100,7 @@ class TestYozumeCheckerIntegration:
 
     def test_basic_check(self):
         """基本的な動作確認."""
-        checker = YozumeChecker(
+        _checker = YozumeChecker(
             engine_path=ENGINE_PATH,
             timeout_ms=10000,
             validate_sakui=False,  # テスト局面が確定するまで検証スキップ

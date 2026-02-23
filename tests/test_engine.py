@@ -42,7 +42,7 @@ class TestUSIEngine:
         engine.quit()
 
     def test_context_manager(self):
-        with USIEngine(ENGINE_PATH) as engine:
+        with USIEngine(ENGINE_PATH) as _engine:
             pass  # start/quit handled
 
     def test_go_mate_simple(self):
